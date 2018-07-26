@@ -23,3 +23,13 @@ articles.insertAdjacentHTML("beforeend",
 const newArticle = articles.lastChild;
 const hulk = articles.firstElementChild;
 hulk.insertAdjacentElement('afterend', newArticle);
+
+// Make all the less important articles equal in width.
+const minorArticles = document.querySelectorAll("article");
+// articles with class diffrent from col-md-4
+// minorArticles[2] has class col-md-5
+minorArticles[2].classList.remove("col-md-5")
+minorArticles[2].classList.add("col-md-4")
+// minorArticles[3] has class col-md-3
+minorArticles[3].classList.remove("col-md-3")
+minorArticles[3].classList.add("col-md-4")
