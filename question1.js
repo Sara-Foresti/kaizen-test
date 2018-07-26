@@ -14,10 +14,12 @@ articles.insertAdjacentHTML("beforeend",
   `<article class="col-md-4">
     <img src="https://hokcx-54c2.kxcdn.com/assets/recruitment/img/ultimatespidermanmarkbagley-56e20cd25f9b5854a9f8a199.jpg" />
     <div class="col-md-12 banner">
-      <h3>Less Important Article</h3>
+      <h3>Additional Article</h3>
       <p>This is another Spiderman article!</p>
     </div>
    </article>`);
 
-
-
+// After that article is added, move it to the 2nd within the list
+const newArticle = articles.lastChild;
+const hulk = articles.firstElementChild;
+hulk.insertAdjacentElement('afterend', newArticle);
