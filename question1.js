@@ -33,3 +33,27 @@ minorArticles[2].classList.add("col-md-4")
 // minorArticles[3] has class col-md-3
 minorArticles[3].classList.remove("col-md-3")
 minorArticles[3].classList.add("col-md-4")
+
+// When the button in the "Most Important Story" is added, change the copy to "This copy has been amended"
+// this is what happens in the js script:
+// var selector = document.getElementById('banner');
+// setTimeout(function() {
+//     selector.insertAdjacentHTML('beforeend', '<span class="button">This is a button</span>');
+// },5000);
+const banner = document.getElementById("banner")
+const copy = banner.querySelector("p")
+const changeCopy = () => {
+  copy.innerHTML = "This copy has been amended";
+};
+setTimeout(changeCopy, 5000);
+
+// When the button in the "Most Important Story" section is clicked
+// present the "Most Important Story" in a styled overlay, re clicking this will close the overlay.
+
+
+
+
+
+
+
+
