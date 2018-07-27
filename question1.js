@@ -49,11 +49,29 @@ setTimeout(changeCopy, 5000);
 
 // When the button in the "Most Important Story" section is clicked
 // present the "Most Important Story" in a styled overlay, re clicking this will close the overlay.
+const masthead = document.querySelector(".masthead")
+const insertOverlay = () => {
+  masthead.insertAdjacentHTML('beforeend', `<div id="overlay">
+              <div class="col-md-6 col-md-offset-3 overlay-style">
+                <img class="overlay-image" src="https://hokcx-54c2.kxcdn.com/assets/recruitment/img/IMG_0198.jpg" />
+                <h2>Most Important Story</h2>
+                <p>This article has the most visual weight</p>
+              </div></div>`);
+};
+setTimeout(insertOverlay, 0);
 
 
+const getButton = () => {
+    button = document.querySelector(".button");
+    button.addEventListener("click", (event) => {
+      // console.log("test");
+      const overlay = document.getElementById("overlay");
+      // console.log(overlay);
+      overlay.style.display = "block";
+    });
+    overlay.addEventListener("click", (event) => {
+      overlay.style.display = "none";
+    });
+  };
 
-
-
-
-
-
+setTimeout(getButton, 5500);
